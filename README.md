@@ -5,11 +5,19 @@
 # Teslo API
 1. Clonar el proyecto
 ```
-git clone 
+git clone https://github.com/garySZA/teslo-shop-nest.git
 ```
-1. Clonar el archivo __.env.template__ y renombrar la copia a __env.__
-2. Llenar las variables de entorno definidas en el archivo ```.env```
-3. Levantar la base de datos - PostgreSQL
+2. Instalar las dependencias
+```
+yarn install
+```
+3. Clonar el archivo __.env.template__ y renombrar la copia a __env.__
+4. Llenar las variables de entorno definidas en el archivo ```.env```
+5. Levantar la base de datos - PostgreSQL
 ```
   docker-compose up -d
+```
+6. Levantar en modo Dev
+```
+yarn start:dev
 ```
