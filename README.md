@@ -21,8 +21,9 @@ yarn install
 ```
   http://localhost:3000/api/v1/seed
 ```
-[!NOTE]
-El puerto para ejecutar el seed dependerá del que se haya asignado en __.env__
+
+> [!NOTE]
+> El puerto para ejecutar el seed dependerá del que se haya asignado en __.env__
 
 7. Levantar en modo Dev
 ```

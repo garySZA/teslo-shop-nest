@@ -3,8 +3,12 @@
 /node_modules
 /build
 /postgres
+/public
+*.jpg
+*.png
+*.jpeg
 
-# Logs
+# Logsgit 
 logs
 *.log
 npm-debug.log*
