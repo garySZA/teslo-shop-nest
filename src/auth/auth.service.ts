@@ -5,13 +5,14 @@ import {
     UnauthorizedException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+import { JwtService } from '@nestjs/jwt';
+
 import { Repository } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 
 import { CreateUserDto, LoginUserDto } from './dto';
 import { User } from './entities';
 import { JwtPayload } from './interfaces';
-import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class AuthService {
@@ -61,6 +62,13 @@ export class AuthService {
                 'Credentials are not valid (password)'
             );
 
+        return {
+            ...user,
+            token: this.getJwtToken({ id: user.id }),
+        };
+    }
+
+    checkAuthStatus(user: User) {
         return {
             ...user,
             token: this.getJwtToken({ id: user.id }),
